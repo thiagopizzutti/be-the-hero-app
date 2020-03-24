@@ -18,7 +18,7 @@ module.exports = {
         } = request.body
         const id = crypto.randomBytes(4).toString('HEX')
 
-        connection('ongs').insert({
+        await connection('ongs').insert({
             id,
             name,
             email,
